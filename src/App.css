@@ -1,22 +1,116 @@
-.App {
-  text-align: center;
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+}
+.tabs{
+    margin: 5px;
+   display: flex;
+  justify-content: flex-end;
+  border-bottom:2px solid rgb(226, 138, 86);
+}
+.tab{
+    padding: 10px;
+    margin:10px 0px;
+    border: 0;
+    background-color: rgb(141, 141, 240);
+    color: cornsilk;
+    
+
+}
+.tab:focus{
+    color: cornsilk;
+    background-color: rgb(226, 138, 86);
+    box-shadow:0px 10px 0px 0px  rgb(141, 141, 240) ;
+       
+}
+.tab:hover{
+    background-color: rgb(124, 124, 245);
+    box-shadow:0px 5px 0px 0px  rgb(226, 138, 86) ;
+}
+.tab:active{
+    background-color: rgb(226, 138, 86);
+    color: cornsilk;
+}
+.post{
+    
+    width: 70%;
+    max-height: 700px;
+    overflow-y: scroll;
+    scrollbar-color: dark blue;
 }
 
-.App-logo {
-  height: 40vmin;
+.user{
+    width: 25%;
+    max-height: 700px;
+    overflow-y: scroll;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home{
+    display: flex;
+    background-color: white;
 }
-
-.App-link {
-  color: #09d3ac;
+.card{
+    border: 0;
+    margin:10px 0px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: white ;
+    border: 4px solid white;
+}
+.card:hover{
+    margin:10px 0px;
+    padding: 2px;
+    border: 4px solid rgb(88, 88, 245);
+    box-shadow: 0 5px 2px 0px rgb(226, 138, 86);
+    
+}
+.card:active {
+    color: rgb(226, 138, 86);
+    padding: 2px;
+    border: 4px solid rgb(226, 138, 86);
+    transition: all 0.003s ease-in-out ;
+}
+.cardHead{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 1.1px solid rgb(158, 155, 155);
+    font-size: small;
+}
+.descrip{
+    padding: 10px;
+    font-size: large;
+}
+.nameUser{
+    padding: 2px;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: 4px solid white;
+    border-radius: 10px;
+    text-align: center;
+}
+.nameUser:hover{
+    margin:  2px;
+    padding: 2px;
+    border: 4px solid rgb(88, 88, 245);
+    box-shadow: 0px 2px 2px 0px rgb(226, 138, 86);
+}
+.nameUser:active{
+    color: rgb(226, 138, 86);
+    border: 4px solid rgb(226, 138, 86);
+    transition: all 0.002s ease-in-out ;
+}
+.textUser{
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+}
+img{
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
 }
