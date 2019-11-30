@@ -13,46 +13,43 @@ class Login extends PureComponent {
         }
        }
      }
-   getEmail=(e)=>{
-       this.setState ({
-           email: e.target.value,
-           style : {border : "1px solid white"} 
-        })
-        this.state.poster.email = e.target.value;
-    }
-      
-   getPass=(e)=>{
-       this.setState ({
-           password: e.target.value,
-           style : {border : "1px solid white"} 
-        })
-        this.state.poster.password = e.target.value;
+
+   getInput=(e,inpName)=>{
+
+    this.setState ({
+        [`${inpName}`] : e.target.value,
+        style : {border : "1px solid white"} 
+    })
+    this.state.poster[`${inpName}`] = e.target.value;
    }
    
    onLogin=()=>{
-     Api.postLogin((data)=>{
+     Api.postForm((data)=>{
          if(data !== undefined){
-         console.log("Logined",data);
+            this.setState({
+                style : {border : "1.5px solid green"}}) ;
+          setTimeout(() => {this.props.onWork()}, 500)
          }
          else{ 
         this.setState({
-            email: "",
-            password: "",
             style : {border : "1.5px solid red"}}) ;
          console.log("NOT LOGINED!");
          }
-     },this.state.poster)
+     },this.state.poster, 'https://it-blog-posts.herokuapp.com/api/people/login')
     }
     render() { 
         return (
         <div className="imgBack">
+             <div className="titleText" style ={{color: "rgb(226, 138, 86)",fontSize:"40px"}}>
+             Login
+            </div>
         <div className="container">
         <div className="inpSection">
-        <input className="inp" style={this.state.style} type ="text" onChange={this.getEmail}  placeholder={"Email"}/>
-        <input className="inp" style={this.state.style} type ="password"  onChange={this.getPass}  placeholder={"Password"}/>
+        <input className="inp" style={this.state.style} type ="text" onChange={(e)=>{this.getInput(e,"email")}}  placeholder={"Email"}/>
+        <input className="inp" style={this.state.style} type ="password"  onChange={(e)=>{this.getInput(e,"password")}}  placeholder={"Password"}/>
         </div>
         <div className="butSection">
-        <button className ="button" onClick={this.onLogin} onEnter={this.onLogin}>Submit</button>
+        <button className ="button" onClick={this.onLogin} >Submit</button>
         </div>
         </div>
         </div>  

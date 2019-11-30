@@ -31,8 +31,8 @@ const fetchArticles = function (callback) { // fetch all articles
         console.log("Error", err);
       });
   }
-  const Login = function(callback,user) {
-    fetch('https://it-blog-posts.herokuapp.com/api/people/login',
+  const postForm = function(callback,user,url) {
+    fetch(url,
     {   
         method:"POST",
         body: JSON.stringify(user),
@@ -49,7 +49,7 @@ const fetchArticles = function (callback) { // fetch all articles
      constructor(){
          this.getUser= fetchBloggers;
          this.getPost= fetchArticles;
-         this.postLogin = Login;
+         this.postForm = postForm;
      }
   }
 

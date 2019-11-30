@@ -5,9 +5,9 @@ class About extends Component{
     render() {
         return ( 
             <div className="about">
-            <div className="container">
-            <div className="sometext" style ={{color: "yellow"}}>
-                Hello!
+            <div className="imgBack">
+            <div className="titleText">
+                Hello
             </div>
         </div> 
         </div>

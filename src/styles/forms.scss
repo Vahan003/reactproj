@@ -7,10 +7,29 @@ $colororange: rgb(226, 138, 86);
   background-position: center;
   background-size: cover;
   width: 25%;
+  min-width: 260px;
+  height: 25%;
   padding: 60px;
   margin: 5% 0px 0px 35%;
   border-radius: 10px;
-  box-shadow:0px 0px 5px 5px  rgb(226, 138, 86) ;
+  box-shadow:0px 0px 5px 5px  $colororange ;
+}
+.imgBack:hover{
+    box-shadow:0px 0px 6px 6px  $colororange ;  
+}
+.titleText{
+    margin: 5px;
+    padding: 2px;
+    color: $colororange;
+    font-size:50px;
+    border-right: 2px solid $colororange;
+    text-shadow: 0px 0px 10px $colororange;
+    box-shadow: 10px 0px 10px -10px $colororange;
+}
+.titleText:hover{
+    text-shadow: none;
+    box-shadow: none;
+    transition:all  0.3s ease ;
 }
 .container{
     
