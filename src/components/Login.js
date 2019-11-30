@@ -1,20 +1,32 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Api from '../api/Api'
-class Login extends Component {
+class Login extends PureComponent {
    constructor(props){
        super(props);
        this.state={
         password: "" ,  
-        email: ""
+        email: "",
+        style : {border : "1px solid white"},
+        poster:{
+            password: "" ,  
+            email: "",  
+        }
        }
-   }
-   inpStyle = "";
+     }
    getEmail=(e)=>{
-       this.state.email =  e.target.value;
+       this.setState ({
+           email: e.target.value,
+           style : {border : "1px solid white"} 
+        })
+        this.state.poster.email = e.target.value;
     }
       
    getPass=(e)=>{
-    this.state.password = e.target.value;
+       this.setState ({
+           password: e.target.value,
+           style : {border : "1px solid white"} 
+        })
+        this.state.poster.password = e.target.value;
    }
    
    onLogin=()=>{
@@ -22,18 +34,29 @@ class Login extends Component {
          if(data !== undefined){
          console.log("Logined",data);
          }
-         else{
-       this.inpStyle = "1px solid red";
-       console.log("NOT LOGINED!")
+         else{ 
+        this.setState({
+            email: "",
+            password: "",
+            style : {border : "1.5px solid red"}}) ;
+         console.log("NOT LOGINED!");
          }
-     },this.state)
-   }
+     },this.state.poster)
+    }
     render() { 
-        return (<div className="container">
-            <input className="inp" style= {{border:`${this.inpStyle}`}} type ="text" onChange={this.getEmail}/>
-            <input className="inp" style= {{border:`${this.inpStyle}`}} type ="password" onChange={this.getPass}/>
-            <button className ="button" onClick={this.onLogin}>Submit</button>
-        </div>  );
+        return (
+        <div className="imgBack">
+        <div className="container">
+        <div className="inpSection">
+        <input className="inp" style={this.state.style} type ="text" onChange={this.getEmail}  placeholder={"Email"}/>
+        <input className="inp" style={this.state.style} type ="password"  onChange={this.getPass}  placeholder={"Password"}/>
+        </div>
+        <div className="butSection">
+        <button className ="button" onClick={this.onLogin} onEnter={this.onLogin}>Submit</button>
+        </div>
+        </div>
+        </div>  
+        );
     }
 }
  

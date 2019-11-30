@@ -1,0 +1,60 @@
+$colorblue: rgb(124, 124, 245);
+$colororange: rgb(226, 138, 86);
+.imgBack{
+  display: flex;
+  justify-content: center;
+  background-image: url("../images/login-b.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 25%;
+  padding: 60px;
+  margin: 5% 0px 0px 35%;
+  border-radius: 10px;
+  box-shadow:0px 0px 5px 5px  rgb(226, 138, 86) ;
+}
+.container{
+    
+    display: flex;
+    width: 190px;
+    flex-direction: column;
+    border: 2px solid $colororange;
+    padding: 2px;
+    border-radius: 10px;
+    .inpSection{
+    flex-direction: column;
+    .inp{
+        padding: 10px;
+        margin: 0.5px;
+        border: 1px solid white;
+        opacity: 0.7;
+        outline: none;
+        border-radius: 5px;
+    }
+    .inp:hover{
+        opacity: 1;
+    }
+    }
+    .butSection{
+        flex-direction: row;
+        margin: 0px 0px 0px 72%;
+        width: 34%;
+        height: 55%;
+    .button{
+        padding:5px;
+        align-self: flex-end;
+        color : white;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        background-color: $colorblue;
+    }
+    
+    .button:hover{
+        background-color: $colororange;
+    }
+    }
+    }
+.container:hover{
+    border: 2px solid $colorblue;
+}
+
