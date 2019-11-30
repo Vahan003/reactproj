@@ -51,7 +51,7 @@ class Navigation extends PureComponent {
             {this.state.bar === "HOME"? <Home/>: null}
             {this.state.bar === "LOGIN"? <Login onWork={this.onWork}/>: null}
             {this.state.bar === "REGIS"? <Regis onLogin={this.onLogin}/>: null}
-            {this.state.loggined? <Work/>:null}
+            {this.state.bar === "" && this.state.loggined? <Work/>:null}
         </div>  );
     }
 }
