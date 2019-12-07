@@ -49,19 +49,25 @@
     width: 70%;
     max-height: 650px;
     overflow-y: scroll;
-    box-shadow: 10px 0px 20px -7px rgb(226, 138, 86);
 }
 .post:hover{
-    box-shadow: 30px 0px 30px -7px rgb(226, 138, 86);
+    box-shadow: 15px 0px 5px -6px rgb(226, 138, 86);
 }
 .user{
     width: 25%;
     max-height: 650px;
     overflow-y: scroll;
-    box-shadow: 40px 0px 60px -7px rgb(226, 138, 86);
 }
 .user:hover{
-    box-shadow: 70px 0px 30px -6px rgb(226, 138, 86);
+    box-shadow: 15px 0px 5px -6px rgb(226, 138, 86);
+}
+.email{
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+     font-size: 13px;
+     overflow: hidden;
+     cursor: default;
 }
 .card{
     border: 0;
@@ -96,7 +102,6 @@
 }
 .descrip{
     padding: 10px;
-    font-size: large;
 }
 .nameUser{
     padding: 2px;
@@ -125,6 +130,17 @@
     display: flex;
    flex-direction: column;
     justify-content: center;
+    cursor: default;
+}
+.nickname{
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid rgb(226, 138, 86);
+    border-radius: 10px;
+    cursor: default;
+}
+.nickname:hover{
+    border: 2px solid rgb(88, 88, 245);
 }
 img{
     margin: 5px;

@@ -35,10 +35,33 @@ const postForm = function(callback, user, url) {
     }
   })
     .then(response => {
-      if (response.status === 200) return response.json();
+      if (response.status === 200 || response.status === 201) return response.json();
     })
     .then(data => callback(data));
 };
+const putForm = function(callback, user, url) {
+  fetch(url, {
+    method: "PUT",
+    body: JSON.stringify(user),
+    headers: {
+      "content-type": "application/json"
+    }
+  })
+    .then(response => {
+      if (response.status === 200 || response.status === 201) return response.json();
+    })
+    .then(data => callback(data));
+};
+const deleteForm = function(callback, url) {
+  fetch(url, {
+    method: "DELETE"
+  })
+    .then(response => {
+      if (response.status === 200 || response.status === 201) return response.json();
+    })
+    .then(data => callback(data));
+};
+
 const getForm = function(callback, url) {
   fetch(url)
     .then(response => {
@@ -53,6 +76,8 @@ class ApiFunc {
     this.getPost = fetchArticles;
     this.postForm = postForm;
     this.getForm = getForm;
+    this.putForm = putForm;
+    this.deleteForm = deleteForm;
   }
 }
 

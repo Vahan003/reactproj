@@ -3,7 +3,7 @@ import About from "./About";
 import Home from "./Home";
 import Login from "./Login";
 import Regis from "./Regis";
-import Work from "./Work";
+import Work from "./Work/Work";
 import AppContext from "../Context/context";
 class Navigation extends PureComponent {
   constructor(props) {
@@ -53,7 +53,7 @@ class Navigation extends PureComponent {
   render() {
     return (
       <AppContext.Provider
-        value={{getUserId: this.getUserId }}
+        value={{getUserId: this.getUserId}}
       >
         <div className="navigation">
           <div className="tabs">
