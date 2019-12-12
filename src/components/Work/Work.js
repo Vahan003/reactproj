@@ -50,7 +50,7 @@ class Work extends PureComponent {
         )}
         <div className ="home">
         {this.state.workuser && <WorkUser />}
-        {this.state.workuser && <WorkSpace />}
+        {this.state.workuser && <WorkSpace username ={this.state.username}/>}
         </div>
       </div>
     );

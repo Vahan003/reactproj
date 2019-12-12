@@ -6,11 +6,12 @@ const WorkSpace = props => {
   const [state, setState] = useState({
     posts: [],
     showPosts: true,
+    changePosts: "",
     modal: false,
     style: { border: "1px solid white" },
     poster: {
       description: "",
-      author: "",
+      author: props.username,
       title: "",
       personId: `${ID_OF_LOGGINED.userId}`
     }
@@ -26,7 +27,7 @@ const WorkSpace = props => {
   }
   useEffect(() => {
     getPosts();
-  }, []);
+  }, [state.changePosts]);
 
   //-----------------------------------------------------------------
   const getInput = (e, inpName) => {
@@ -45,7 +46,6 @@ const WorkSpace = props => {
       poster: {
         ...state.poster,
         description: "",
-        author: "",
         title: ""
       }
     });
@@ -53,18 +53,12 @@ const WorkSpace = props => {
   const onPosts = () => {
     Api.postForm(
       data => {
-        getPosts();
         if (data !== undefined) {
-          
+          console.log(data)
           setState({
             ...state,
-            style: { border: "1.5px solid white" },
-            poster: {
-              ...state.poster,
-              description: "",
-              author: "",
-              title: ""
-            }
+            changePosts: data.id,
+            style: { border: "1.5px solid white" }
           });
         }
         else{
@@ -99,7 +93,8 @@ const WorkSpace = props => {
                 className="inpmodal"
                 style={state.style}
                 onChange={e => getInput(e, "author")}
-                placeholder={"author"}
+                placeholder={state.poster.author}
+                disabled
               />
             </div>
             <div className="desc">

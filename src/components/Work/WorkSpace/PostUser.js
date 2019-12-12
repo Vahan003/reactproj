@@ -95,6 +95,7 @@ const PostUser = props => {
               style={state.style}
               onChange={e => getInput(e, "author")}
               value={state.poster.author}
+              disabled
             />
           </div>
           <div className="desc">
