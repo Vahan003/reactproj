@@ -1,13 +1,13 @@
-$colorblue: rgb(124, 124, 245);
-$colororange: rgb(226, 138, 86);
+$colorblue: #6c5b7b;
+$colororange: #c06c84;
 .imgBack{
   display: flex;
   justify-content: center;
-  background-image: url("../images/login-b.jpg");
+  background-image: url("../images/login-b1.jpg");
   background-position: center;
   background-size: cover;
   width: 25%;
-  min-width: 260px;
+  min-width: 20vh;
   height: 25%;
   padding: 60px;
   margin: 5% 0px 0px 35%;
@@ -21,7 +21,7 @@ $colororange: rgb(226, 138, 86);
     margin: 5px;
     padding: 2px;
     color: $colororange;
-    font-size:50px;
+    font-size:40px;
     border-right: 2px solid $colororange;
     text-shadow: 0px 0px 10px $colororange;
     box-shadow: 10px 0px 10px -10px $colororange;
@@ -40,18 +40,22 @@ $colororange: rgb(226, 138, 86);
 .container{
     
     display: flex;
-    width: 190px;
+    min-width: 60%;
     flex-direction: column;
     border: 2px solid $colororange;
     padding: 2px;
     border-radius: 10px;
     .inpSection{
     flex-direction: column;
+     width: 100%;
     .inp{
-        padding: 10px;
+        max-width: 98%;
+        min-width: 98%;
+        padding: 1vh 0px 1vh 0px;
+      //  padding: 0.60vh;
         margin: 0.5px;
         border: 1px solid white;
-        opacity: 0.7;
+        opacity: 0.8;
         outline: none;
         border-radius: 5px;
     }
@@ -61,12 +65,9 @@ $colororange: rgb(226, 138, 86);
     }
     .butSection{
         flex-direction: row;
-        margin: 0px 0px 0px 72%;
-        width: 34%;
-        height: 55%;
+        align-self: flex-end;
     .button{
         padding:5px;
-        align-self: flex-end;
         color : white;
         border: none;
         border-radius: 10px;

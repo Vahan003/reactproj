@@ -1,14 +1,14 @@
-$colorblue: rgb(124, 124, 245);
-$colororange: rgb(226, 138, 86);
+$colorblue: #6c5b7b;
+$colororange: #c06c84;
 
 .modalBack{
     padding: 10px;
-    border: 4px solid $colororange;
+    border: 2px solid $colororange;
     border-radius: 20px;
     opacity: 0.8;
 }
 .modalBack:hover{
-    border: 4px solid $colorblue;
+    //border: 2px solid $colorblue;
     opacity: 1;
 }
 .modal{
@@ -16,10 +16,10 @@ $colororange: rgb(226, 138, 86);
     padding: 5px;
     border-radius: 10px;
     opacity: 1;
-    border-bottom: 2px solid $colororange;
+   // border-bottom: 2px solid $colororange;
 }
 .modal:hover{
-    border-bottom: 2px solid $colorblue;
+   // border-bottom: 2px solid $colorblue;
 }
 .butsec{
     padding:5px;

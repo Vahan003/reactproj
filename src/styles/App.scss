@@ -1,49 +1,55 @@
+$colorblue: rgba(0, 0, 0, 0.407);
+$colororange: #c06c84;
+$colorbluedark: #6c5b7b;
+$colorblueligth: #8865a7;
 .about{
  display: flex;
- position: absolute;
- background-image: url("../images/home-b.png");
+ //position: absolute;
+ background-image: url("../images/home-b1.jpg");
  background-position: center;
  background-size: cover;
- height: 90%;
+ height: 91vh;
  width: 100%;
 }
 .tabs{
   margin: 1.5px;
   display: flex;
+  min-width: 90%;
   justify-content: flex-end;
-  border-bottom:2px solid rgb(226, 138, 86);
-  background-image: url("../images/tabs-b.jpg");
+  border-bottom:2px solid $colororange;
+  background-image: url("../images/tabs-b1.jpg");
   background-position: center;
   background-size: 800px 700px;
 }
 .tabs:hover{
-  border-bottom:2px solid rgb(141, 141, 240);
+  border-bottom:2px solid $colorblueligth;
 }
 .tab{
     padding: 10px;
     margin:10px 0px;
     border: 0;
-    background-color: rgb(141, 141, 240);
+    background-color: $colorblueligth;
     color: cornsilk;
+    outline: none;
 }
 .tab:focus{
     color: cornsilk;
-    background-color: rgb(226, 138, 86);
-    box-shadow:0px 10px 0px 0px  rgb(141, 141, 240) ;
+    background-color: $colororange;
+    box-shadow:0px 10px 0px 0px  $colorblue;
        
 }
 .tab:hover{
-    background-color: rgb(124, 124, 245);
-    box-shadow:0px 5px 0px 0px  rgb(226, 138, 86) ;
+    background-color: $colorblue;
+    box-shadow:0px 5px 0px 0px  $colororange ;
 }
 .tab:active{
-    background-color: rgb(226, 138, 86);
+    background-color: $colororange;
     color: cornsilk;
 }
 .home {
  display: flex;
  width: 100%;
- height: 41em;
+ height: 91vh;
 
 }
 .post{
@@ -52,14 +58,14 @@
     overflow-y: scroll;
 }
 .post:hover{
-    box-shadow: 15px 0px 5px -6px rgb(226, 138, 86);
+    box-shadow: 9px 0px 5px -6px $colororange;
 }
 .user{
     width: 25%;
     overflow-y: scroll;
 }
 .user:hover{
-    box-shadow: 15px 0px 5px -6px rgb(226, 138, 86);
+    box-shadow: 9px 0px 5px -6px $colororange;
 }
 .email{
     display: flex;
@@ -75,23 +81,23 @@
     padding: 2px;
     border-radius: 10px;
     background-color: white ;
-    border: 4px solid white;
+    border: 1.5px solid white;
     opacity: 0.7;
     
 }
 .card:hover{
     margin:10px 0px;
     padding: 2px;
-    border: 4px solid rgb(88, 88, 245);
-    box-shadow: 0 5px 2px 0px rgb(226, 138, 86);
+    border: 1.5px solid $colorbluedark;
+   // box-shadow: 0 5px 2px 0px $colororange;
     opacity: 1;
     
 }
 .card:active {
-    color: rgb(226, 138, 86);
+   // color: $colororange;
     padding: 2px;
-    border: 4px solid rgb(226, 138, 86);
-    transition: all 0.003s ease-in-out ;
+    border: 1.5px solid $colororange;
+   // transition: all 0.003s ease-in-out ;
 }
 .cardHead{
     display: flex;
@@ -105,12 +111,13 @@
     overflow-wrap: break-word;
 }
 .nameUser{
+    min-height: 1.5vh;
     padding: 2px;
     margin: 2px;
     display: flex;
     flex-direction: row;
     background-color: white;
-    border: 4px solid white;
+    border: 1.5px solid white;
     border-radius: 10px;
     text-align: center;
     opacity: 0.8;
@@ -118,13 +125,13 @@
 .nameUser:hover{
     margin:  2px;
     padding: 2px;
-    border: 4px solid rgb(88, 88, 245);
-    box-shadow: 0px 2px 2px 0px rgb(226, 138, 86);
+    border: 1.5px solid $colorbluedark;
+   // box-shadow: 0px 2px 2px 0px $colororange;
     opacity: 1;
 }
 .nameUser:active{
-    color: rgb(226, 138, 86);
-    border: 4px solid rgb(226, 138, 86);
+    //color: $colororange;
+    border: 1.5px solid $colororange;
     transition: all 0.002s ease-in-out ;
 }
 .textUser{
@@ -136,12 +143,12 @@
 .nickname{
     margin: 5px;
     padding: 5px;
-    border: 2px solid rgb(226, 138, 86);
+    border: 2px solid $colororange;
     border-radius: 10px;
     cursor: default;
 }
 .nickname:hover{
-    border: 2px solid rgb(88, 88, 245);
+    border: 2px solid $colorbluedark;
 }
 img{
     margin: 5px;

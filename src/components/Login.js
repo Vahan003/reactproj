@@ -52,7 +52,6 @@ class Login extends PureComponent {
       <div className="imgBack">
         <div
           className="titleText"
-          style={{ color: "rgb(226, 138, 86)", fontSize: "40px" }}
         >
           Login
         </div>
