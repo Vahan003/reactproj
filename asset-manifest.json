@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/reactproj/static/css/main.7372411b.chunk.css",
+    "main.css": "/reactproj/static/css/main.3b28417d.chunk.css",
     "main.js": "/reactproj/static/js/main.aa50edad.chunk.js",
     "main.js.map": "/reactproj/static/js/main.aa50edad.chunk.js.map",
     "runtime-main.js": "/reactproj/static/js/runtime-main.97ee5759.js",
@@ -8,16 +8,16 @@
     "static/js/2.0baaca51.chunk.js": "/reactproj/static/js/2.0baaca51.chunk.js",
     "static/js/2.0baaca51.chunk.js.map": "/reactproj/static/js/2.0baaca51.chunk.js.map",
     "index.html": "/reactproj/index.html",
-    "precache-manifest.62a661afbc73d5d1f6741874d197420d.js": "/reactproj/precache-manifest.62a661afbc73d5d1f6741874d197420d.js",
+    "precache-manifest.bdb117e7396c0f52b1503c58cc831d0d.js": "/reactproj/precache-manifest.bdb117e7396c0f52b1503c58cc831d0d.js",
     "service-worker.js": "/reactproj/service-worker.js",
-    "static/css/main.7372411b.chunk.css.map": "/reactproj/static/css/main.7372411b.chunk.css.map",
+    "static/css/main.3b28417d.chunk.css.map": "/reactproj/static/css/main.3b28417d.chunk.css.map",
     "static/media/App.scss": "/reactproj/static/media/tabs-b1.f2dcbf42.jpg",
     "static/media/forms.scss": "/reactproj/static/media/login-b1.78b62843.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.97ee5759.js",
     "static/js/2.0baaca51.chunk.js",
-    "static/css/main.7372411b.chunk.css",
+    "static/css/main.3b28417d.chunk.css",
     "static/js/main.aa50edad.chunk.js"
   ]
 }
