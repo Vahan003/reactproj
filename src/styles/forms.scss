@@ -6,8 +6,8 @@ $colororange: #c06c84;
   background-image: url("../images/login-b1.jpg");
   background-position: center;
   background-size: cover;
-  width: 25%;
-  min-width: 20vh;
+  max-width: 25%;
+  min-width: 30vh;
   height: 25%;
   padding: 60px;
   margin: 5% 0px 0px 35%;
@@ -25,9 +25,12 @@ $colororange: #c06c84;
     border-right: 2px solid $colororange;
     text-shadow: 0px 0px 10px $colororange;
     box-shadow: 10px 0px 10px -10px $colororange;
+   
 }
 .userdata{
     color: $colorblue;
+    font-size: 2vh;
+
 }
 .titleText:hover{
     text-shadow: none;
