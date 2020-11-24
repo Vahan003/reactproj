@@ -1,25 +1,25 @@
 $colorblue: rgba(0, 0, 0, 0.407);
-$colororange: #c06c84;
+$colororange: #7d54bf;
 $colorbluedark: #6c5b7b;
 $colorblueligth: #8865a7;
 .about{
  display: flex;
- //position: absolute;
- background-image: url("../images/home-b1.jpg");
+ //background-image: url("../images/home-b2.jpg");
  background-position: center;
- background-size: cover;
- height: 91vh;
+ background-size: contain;
+
  width: 100%;
 }
 .tabs{
-  margin: 1.5px;
+  margin-bottom: 1.5px;
   display: flex;
   min-width: 90%;
   justify-content: flex-end;
   border-bottom:2px solid $colororange;
-  background-image: url("../images/tabs-b1.jpg");
+  //background-image: url("../images/tabs-b2.jfif");
+  background-color: #6e298c;
   background-position: center;
-  background-size: 800px 700px;
+  //background-size: 800px 700px;
 }
 .tabs:hover{
   border-bottom:2px solid $colorblueligth;

@@ -54,6 +54,9 @@ class Login extends PureComponent {
           className="titleText"
         >
           Login
+          <div className = "titleIn">
+            Log in after registation
+          </div>
         </div>
         <div className="container">
           <div className="inpSection">

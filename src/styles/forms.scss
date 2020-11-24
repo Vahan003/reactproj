@@ -1,21 +1,23 @@
-$colorblue: #6c5b7b;
-$colororange: #c06c84;
+$colorblue: #cb8ee6;
+$colororange: #ffd6e2;
+$colororange1: #995a6d;
 .imgBack{
   display: flex;
   justify-content: center;
-  background-image: url("../images/login-b1.jpg");
+  background-image: url("../images/login-b2.jpg");
   background-position: center;
   background-size: cover;
-  max-width: 25%;
+  max-width: 30%;
   min-width: 30vh;
-  height: 25%;
-  padding: 60px;
-  margin: 5% 0px 0px 35%;
+  height: auto;
+  padding: calc(150px - 4%);
+  margin: 5% 0px 0px 30%;
   border-radius: 10px;
-  box-shadow:0px 0px 5px 5px  $colororange ;
+  box-shadow:0px 0px 5px 5px  $colororange1 ;
+  overflow-y: auto;
 }
 .imgBack:hover{
-    box-shadow:0px 0px 6px 6px  $colororange ;  
+    box-shadow:0px 0px 6px 6px  $colororange1 ;
 }
 .titleText{
     margin: 5px;
@@ -24,8 +26,16 @@ $colororange: #c06c84;
     font-size:40px;
     border-right: 2px solid $colororange;
     text-shadow: 0px 0px 10px $colororange;
-    box-shadow: 10px 0px 10px -10px $colororange;
+    box-shadow: 10px 0px 10px -10px $colororange1;
    
+}
+.titleIn {
+    margin: 5px;
+    padding: 2px;
+    color: $colororange;
+    font-size:calc(30px - 15%);
+    border-right: 2px solid $colororange;
+    box-shadow: 10px 0px 10px -10px $colororange;
 }
 .userdata{
     color: $colorblue;
@@ -45,7 +55,7 @@ $colororange: #c06c84;
     display: flex;
     min-width: 60%;
     flex-direction: column;
-    border: 2px solid $colororange;
+    //border: 2px solid $colororange;
     padding: 2px;
     border-radius: 10px;
     .inpSection{
@@ -73,7 +83,7 @@ $colororange: #c06c84;
         padding:5px;
         color : white;
         border: none;
-        border-radius: 10px;
+        border-radius: 5px;
         outline: none;
         background-color: $colorblue;
     }
@@ -84,6 +94,17 @@ $colororange: #c06c84;
     }
     }
 .container:hover{
-    border: 2px solid $colorblue;
+    //border: 2px solid $colorblue;
+}
+.button{
+    padding:5px;
+    color : white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: $colorblue;
 }
 
+.button:hover{
+    background-color: $colororange;
+}

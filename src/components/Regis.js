@@ -47,6 +47,9 @@ class Regis extends PureComponent {
          <div className="imgBack">
              <div className="titleText">
              Register
+                 <div className = "titleIn">
+                     Write valid data
+                 </div>
             </div>
          <div className="container">
          {this.state.success === "Successfully!"? <div style ={{color: "green", textAlign : "center",fontSize:"14px"}}>{this.state.success}</div>: null}
