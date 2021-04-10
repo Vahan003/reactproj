@@ -1,4 +1,4 @@
-Тo enter the space use
+Тo enter the Workspace use
 login--- vahan.m@mail.ru
 password--- 123456
 
